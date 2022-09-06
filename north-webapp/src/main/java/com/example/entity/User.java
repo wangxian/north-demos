@@ -1,4 +1,4 @@
-package top.xiqiu.test.entity;
+package com.example.entity;
 
 public class User {
 

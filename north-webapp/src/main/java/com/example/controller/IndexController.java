@@ -1,9 +1,9 @@
-package top.xiqiu.test.controller;
+package com.example.controller;
 
 import top.xiqiu.north.annotation.*;
 import top.xiqiu.north.core.ModelAndView;
-import top.xiqiu.test.entity.Login;
-import top.xiqiu.test.entity.User;
+import com.example.entity.Login;
+import com.example.entity.User;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

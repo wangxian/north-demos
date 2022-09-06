@@ -1,8 +1,8 @@
-package top.xiqiu.test.mapper;
+package com.example.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.example.entity.Person;
 import org.apache.ibatis.annotations.Select;
-import top.xiqiu.test.entity.Person;
 
 import java.util.List;
 

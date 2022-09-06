@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>top.xiqiu</groupId>
-  <artifactId>north</artifactId>
+  <groupId>com.example</groupId>
+  <artifactId>test</artifactId>
   <version>1.0</version>
   <packaging>jar</packaging>
 
@@ -22,20 +22,14 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.apache.tomcat.embed</groupId>
-      <artifactId>tomcat-embed-core</artifactId>
-      <version>${tomcat.version}</version>
+      <groupId>top.xiqiu</groupId>
+      <artifactId>north</artifactId>
+      <version>1.0</version>
     </dependency>
     <dependency>
       <groupId>org.apache.tomcat.embed</groupId>
       <artifactId>tomcat-embed-jasper</artifactId>
-      <version>${tomcat.version}</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.google.code.gson</groupId>
-      <artifactId>gson</artifactId>
-      <version>2.9.1</version>
+      <version>9.0.65</version>
     </dependency>
 
     <dependency>
@@ -64,6 +58,7 @@
       <groupId>com.zaxxer</groupId>
       <artifactId>HikariCP</artifactId>
       <version>5.0.1</version>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>com.h2database</groupId>
@@ -75,6 +70,7 @@
       <groupId>p6spy</groupId>
       <artifactId>p6spy</artifactId>
       <version>3.9.1</version>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>mysql</groupId>
@@ -82,7 +78,6 @@
       <version>8.0.30</version>
       <scope>test</scope>
     </dependency>
-
 
     <dependency>
       <groupId>junit</groupId>
@@ -135,7 +130,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>top.xiqiu.test.WebTester</mainClass>
+              <mainClass>com.example.WebTester</mainClass>
             </manifest>
           </archive>
 
@@ -157,6 +152,5 @@
 
     </plugins>
   </build>
-
 
 </project>

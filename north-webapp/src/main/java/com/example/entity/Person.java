@@ -1,4 +1,4 @@
-package top.xiqiu.test.entity;
+package com.example.entity;
 
 import top.xiqiu.north.annotation.TableName;
 

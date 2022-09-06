@@ -1,4 +1,4 @@
-package top.xiqiu;
+package com.example;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.core.MybatisConfiguration;
@@ -21,8 +21,8 @@ import org.apache.ibatis.transaction.jdbc.JdbcTransactionFactory;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import top.xiqiu.test.entity.Person;
-import top.xiqiu.test.mapper.PersonMapper;
+import com.example.entity.Person;
+import com.example.mapper.PersonMapper;
 
 import javax.sql.DataSource;
 import java.io.File;
