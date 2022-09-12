@@ -1,4 +1,4 @@
-package com.example;
+package org.example;
 
 import top.xiqiu.north.North;
 

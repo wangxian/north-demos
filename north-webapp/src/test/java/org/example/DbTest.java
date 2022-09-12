@@ -1,10 +1,10 @@
-package com.example;
+package org.example;
 
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import top.xiqiu.north.db.*;
-import com.example.entity.Person;
+import org.example.entity.Person;
 
 import javax.sql.DataSource;
 import java.sql.SQLException;

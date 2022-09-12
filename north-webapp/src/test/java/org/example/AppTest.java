@@ -1,4 +1,4 @@
-package com.example;
+package org.example;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 import top.xiqiu.north.North;
 import top.xiqiu.north.core.JsonConverter;
 import top.xiqiu.north.util.NorthUtil;
-import com.example.entity.Login;
+import org.example.entity.Login;
 
 import java.lang.reflect.Type;
 import java.security.Provider;

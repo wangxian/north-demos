@@ -1,11 +1,11 @@
-package com.example.controller;
+package org.example.controller;
 
 import top.xiqiu.north.annotation.Controller;
 import top.xiqiu.north.annotation.GetMapping;
 import top.xiqiu.north.annotation.PostMapping;
 import top.xiqiu.north.core.ModelAndView;
-import com.example.entity.Login;
-import com.example.entity.User;
+import org.example.entity.Login;
+import org.example.entity.User;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;

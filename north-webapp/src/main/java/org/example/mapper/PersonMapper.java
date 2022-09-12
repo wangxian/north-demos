@@ -1,7 +1,7 @@
-package com.example.mapper;
+package org.example.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.example.entity.Person;
+import org.example.entity.Person;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;

@@ -111,7 +111,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>com.example.WebTester</mainClass>
+              <mainClass>org.example.WebTester</mainClass>
             </manifest>
           </archive>
 

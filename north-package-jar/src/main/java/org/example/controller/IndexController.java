@@ -1,4 +1,4 @@
-package com.example.controller;
+package org.example.controller;
 
 import top.xiqiu.north.annotation.Controller;
 import top.xiqiu.north.annotation.GetMapping;
