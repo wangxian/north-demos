@@ -4,46 +4,21 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.example</groupId>
-  <artifactId>test</artifactId>
+  <parent>
+    <artifactId>north-demos</artifactId>
+    <groupId>org.example</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>north-webapp</artifactId>
   <version>1.0</version>
   <packaging>jar</packaging>
 
-  <name>north</name>
+  <name>${project.artifactId}</name>
   <url>https://xiqiu.top</url>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>11</maven.compiler.source>
-    <maven.compiler.target>11</maven.compiler.target>
-
-    <tomcat.version>9.0.65</tomcat.version>
-  </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>top.xiqiu</groupId>
-      <artifactId>north</artifactId>
-      <version>1.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomcat.embed</groupId>
-      <artifactId>tomcat-embed-jasper</artifactId>
-      <version>9.0.65</version>
-    </dependency>
-
-    <!--<dependency>-->
-    <!--  <groupId>org.slf4j</groupId>-->
-    <!--  <artifactId>slf4j-simple</artifactId>-->
-    <!--  <version>1.7.36</version>-->
-    <!--</dependency>-->
-    <dependency>
-      <groupId>ch.qos.logback</groupId>
-      <artifactId>logback-classic</artifactId>
-      <version>1.2.11</version>
-    </dependency>
-
-
     <dependency>
       <groupId>io.pebbletemplates</groupId>
       <artifactId>pebble</artifactId>
