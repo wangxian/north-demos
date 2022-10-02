@@ -2,8 +2,8 @@ package org.example;
 
 import top.xiqiu.north.North;
 
-public class WebTester {
+public class WebAppStart {
     public static void main(String[] args) {
-        North.start(WebTester.class);
+        North.start(WebAppStart.class, args);
     }
 }

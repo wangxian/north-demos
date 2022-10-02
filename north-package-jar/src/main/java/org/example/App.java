@@ -7,6 +7,6 @@ import top.xiqiu.north.North;
  */
 public class App {
     public static void main(String[] args) {
-        North.start(App.class);
+        North.start(App.class, args);
     }
 }
