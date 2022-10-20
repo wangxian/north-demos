@@ -13,6 +13,8 @@
     <module>north-simple</module>
     <module>north-package-jar</module>
     <module>north-webapp</module>
+    <module>north-websocket</module>
+    <module>north-jsp</module>
   </modules>
 
   <properties>
@@ -25,7 +27,7 @@
     <dependency>
       <groupId>top.xiqiu</groupId>
       <artifactId>north</artifactId>
-      <version>1.0.5</version>
+      <version>1.0.6</version>
     </dependency>
 
     <dependency>
