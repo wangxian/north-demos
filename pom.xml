@@ -15,6 +15,7 @@
     <module>north-webapp</module>
     <module>north-websocket</module>
     <module>north-jsp</module>
+    <module>north-schedule</module>
   </modules>
 
   <properties>
