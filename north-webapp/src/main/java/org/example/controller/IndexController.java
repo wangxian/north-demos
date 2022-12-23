@@ -4,6 +4,7 @@ import top.xiqiu.north.annotation.*;
 import top.xiqiu.north.core.ModelAndView;
 import org.example.entity.Login;
 import org.example.entity.User;
+import top.xiqiu.north.core.NorthException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -96,10 +97,37 @@ public class IndexController {
         response.setContentType("text/plain;charset=utf-8");
 
         PrintWriter printWriter = response.getWriter();
-        printWriter.write("500 ERROR\n");
-        printWriter.write( "原因：" + req.getAttribute("errorMessage").toString());
-        printWriter.write(req.getAttribute("errorStackTrace").toString());
+
+        Throwable err = (Throwable) req.getAttribute("targetException");
+        printWriter.write("发生错误 - 500 ERROR\n\n\n");
+
+        if (err instanceof NorthException) {
+            printWriter.write("异常类型：NorthException\n");
+        } else if (err instanceof RuntimeException) {
+            printWriter.write("异常类型：RuntimeException\n");
+        } else {
+            printWriter.write("异常类型：未知类型\n");
+        }
+
+        printWriter.write( "异常信息：" + err.getMessage());
         printWriter.flush();
+    }
+
+    /**
+     * 测试编译参数 -parameters
+     * <a href="http://127.0.0.1:8080/test500?id=188">test link</a>
+     * <a href="http://127.0.0.1:8080/test500?id=88">test link</a>
+     * <a href="http://127.0.0.1:8080/test500?id=20">test link</a>
+     */
+    @GetMapping("/test500")
+    public String test(@RequestParam("id") Integer id) {
+        if (id > 100) {
+            throw new NorthException("抱歉，id不能大于100");
+        } else if (id > 50) {
+            throw new RuntimeException("抱歉，id不能大于50");
+        }
+
+        return String.format("/test500 --- id = %d", id);
     }
 
     /**
