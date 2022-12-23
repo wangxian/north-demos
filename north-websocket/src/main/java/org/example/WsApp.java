@@ -2,11 +2,8 @@ package org.example;
 
 import top.xiqiu.north.North;
 
-/**
- * Hello world!
- */
-public class App {
+public class WsApp {
     public static void main(String[] args) {
-        North.start(App.class, args);
+        North.start(WsApp.class, args);
     }
 }

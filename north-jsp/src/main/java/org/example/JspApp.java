@@ -2,11 +2,8 @@ package org.example;
 
 import top.xiqiu.north.North;
 
-/**
- * Hello world!
- */
-public class App {
+public class JspApp {
     public static void main(String[] args) {
-        North.start(App.class, args);
+        North.start(JspApp.class, args);
     }
 }

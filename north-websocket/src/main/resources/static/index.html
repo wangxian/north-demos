@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WebSocket test</title>
+</head>
+<body>
+<p>打开浏览器终端查看</p>
+<script>
+  const ws = new WebSocket("ws://127.0.0.1:8080/websocket/echo");
+  ws.onopen = function () {
+    console.log("已连接");
+
+    ws.send("hi, ws");
+  }
+
+  ws.onmessage = function (event) {
+    console.info("收到消息：" + event.data);
+  }
+
+  ws.onclose = function (event) {
+    console.error('Info: WebSocket connection closed, Code: ' + event.code + (event.reason == "" ? "" : ", Reason: " + event.reason));
+  }
+</script>
+</body>
+</html>
