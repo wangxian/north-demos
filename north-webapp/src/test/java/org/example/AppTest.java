@@ -8,7 +8,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import top.xiqiu.north.North;
 import top.xiqiu.north.core.JsonConverter;
-import top.xiqiu.north.util.NorthUtil;
+import top.xiqiu.north.core.JsonType;
+import top.xiqiu.north.util.DigestUtils;
+import top.xiqiu.north.util.NorthUtils;
 import org.example.entity.Login;
 
 import java.lang.reflect.Type;
@@ -74,12 +76,12 @@ public class AppTest {
     public void testJsonConverter2Json3() {
         // 解析为 map
         String jsonString = "{\"now\":\"2022-08-12 17:43:50\", \"h\":\"<body><br /><p id=\\\"name\\\"></p></body>\"}";
-        final Map<String, Object> userMap = new JsonConverter().<Map<String, Object>>parse(jsonString);
+        final Map<String, Object> userMap = new JsonConverter().parse(jsonString, new JsonType<Map<String, Object>>() {});
         System.out.println(userMap.get("h"));
 
         // 解析为 list
         jsonString = "[\"x@x.com\", \"b@b.com\"]";
-        List<String> usersList = new JsonConverter().parse(jsonString);
+        List<String> usersList = new JsonConverter().parse(jsonString, List.class);
         System.out.println("usersList.get(0)=" + usersList.get(0));
 
         // 解析为 array
@@ -144,21 +146,21 @@ public class AppTest {
      */
     @Test
     public void extName() {
-        System.out.println(NorthUtil.extName("/tmp/abc.txt"));
-        System.out.println(NorthUtil.extName("/tmp/abc.png"));
-        System.out.println(NorthUtil.extName(" "));
-        System.out.println(NorthUtil.extName("abc.txt"));
-        System.out.println(NorthUtil.extName("xx.webp"));
-        System.out.println(NorthUtil.extName("xx.html"));
-        System.out.println(NorthUtil.extName("xx.css"));
-        System.out.println(NorthUtil.extName("xx.js"));
-        System.out.println(NorthUtil.extName("xx.log"));
+        System.out.println(NorthUtils.extName("/tmp/abc.txt"));
+        System.out.println(NorthUtils.extName("/tmp/abc.png"));
+        System.out.println(NorthUtils.extName(" "));
+        System.out.println(NorthUtils.extName("abc.txt"));
+        System.out.println(NorthUtils.extName("xx.webp"));
+        System.out.println(NorthUtils.extName("xx.html"));
+        System.out.println(NorthUtils.extName("xx.css"));
+        System.out.println(NorthUtils.extName("xx.js"));
+        System.out.println(NorthUtils.extName("xx.log"));
     }
 
     @Test
     public void hashTest() {
-        Assert.assertEquals(NorthUtil.md5("111111"), "96e79218965eb72c92a549dd5a330112");
-        Assert.assertEquals(NorthUtil.sha1("111111"), "3d4f2bf07dc1be38b20cd6e46949a1071f9d0e3d");
+        Assert.assertEquals(DigestUtils.getMD5("111111"), "96e79218965eb72c92a549dd5a330112");
+        Assert.assertEquals(DigestUtils.getSHA1("111111"), "3d4f2bf07dc1be38b20cd6e46949a1071f9d0e3d");
 
         final Provider[] providers = Security.getProviders();
         for (Provider provider : providers) {
